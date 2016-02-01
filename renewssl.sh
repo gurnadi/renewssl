@@ -15,9 +15,7 @@ for EACHDOMAIN in $DOMAIN; do
   DATEEXEC=`echo $(($DATEEXP-1))`;
   if [ $DATEEXEC -lt 10 ]; then DATEEXEC="0$DATEEXEC"; fi;
   DATENOW=`date "+%b %d %Y"`;
-  
-  #HOMEDIR=`echo $EACHDOMAIN | sed 's/\./_/g'`;
-  
+
   if [ "$DATENOW" = "$MONTHEXP $DATEEXEC $YEAREXP" ]; then
         $LETSBIN --config $CONFIGSSL/$EACHDOMAIN.ini --debug certonly
         echo "Update SSL Certificate $EACHDOMAIN on $DATENOW" >> $LOGSSLFILE;
