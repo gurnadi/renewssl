@@ -2,7 +2,7 @@
 DOMAIN="YOURDOMAIN1.COM YOURDOMAIN2.COM";
 CONFIGSSL="/etc/letsencrypt/";
 LETSBIN="/opt/letsencrypt/letsencrypt-auto";
-LOGSLLFILE="/var/log/update_ssl.log";
+LOGSSLFILE="/var/log/update_ssl.log";
 ### END OF CONFIGURATION ###
 
 for EACHDOMAIN in $DOMAIN; do
