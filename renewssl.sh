@@ -17,7 +17,7 @@ for EACHDOMAIN in $DOMAIN; do
   DATENOW=`date "+%b %d %Y"`;
 
   if [ "$DATENOW" = "$MONTHEXP $DATEEXEC $YEAREXP" ]; then
-        $LETSBIN --config $CONFIGSSL/$EACHDOMAIN.ini --debug certonly
+        $LETSBIN --agree-tos --config $CONFIGSSL/$EACHDOMAIN.ini --debug certonly
         echo "Update SSL Certificate $EACHDOMAIN on $DATENOW" >> $LOGSSLFILE;
         /etc/init.d/httpd reload
   fi
