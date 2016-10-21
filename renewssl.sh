@@ -21,6 +21,6 @@ for EACHDOMAIN in $DOMAIN; do
         # if you are running python27 from scl repository on CentOS 6.X uncomment this command below and comment out the above command
         ##scl enable python27 "$LETSBIN --agree-tos --config $CONFIGSSL/$EACHDOMAIN.ini --debug certonly"
         echo "Update SSL Certificate $EACHDOMAIN on $DATENOW" >> $LOGSSLFILE;
-        /etc/init.d/httpd reload
+        /etc/init.d/httpd restart
   fi
 done
