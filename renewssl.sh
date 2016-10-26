@@ -55,7 +55,7 @@ for EACHDOMAIN in $DOMAIN; do
   if [ $DATEEXEC -lt 10 ]; then DATEEXEC="0$DATEEXEC"; fi;
   DATENOW=`date "+%b %d %Y"`;
   DATENOW2=`date +%Y%m%d`;
-  DATETEK="$YEAREXP$ANGKAMON$DATEEXP";
+  DATETEK="$YEAREXP$ANGKAMON$DATEEXEC";
 
   if [ "$DATENOW" = "$MONTHEXP $DATEEXEC $YEAREXP" ] || [ $DATENOW2 -gt $DATETEK ]; then
         $LETSBIN -q --agree-tos --config $CONFIGSSL/$EACHDOMAIN.ini certonly
