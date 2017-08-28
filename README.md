@@ -12,4 +12,4 @@ This script will be running everyday, but the script will update only the certif
 
 If you are using certbot on CentOS 6.X and already install python27 from SCL Repository, Open ## on the script like this:
 
-scl enable python27 "$LETSBIN -q --agree-tos --config $CONFIGSSL/$EACHDOMAIN.ini certonly"
+scl enable python27 "$LETSBIN -q --agree-tos --expand --config $CONFIGSSL/$EACHDOMAIN.ini certonly"
