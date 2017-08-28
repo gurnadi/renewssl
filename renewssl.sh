@@ -60,7 +60,7 @@ for EACHDOMAIN in $DOMAIN; do
   if [ "$DATENOW" = "$MONTHEXP $DATEEXEC $YEAREXP" ] || [ $DATENOW2 -gt $DATETEK ]; then
         $LETSBIN -q --agree-tos --config $CONFIGSSL/$EACHDOMAIN.ini certonly
         # if you are running python27 from scl repository on CentOS 6.X uncomment this command below and comment out the above command
-        ##scl enable python27 "$LETSBIN -q --agree-tos --config $CONFIGSSL/$EACHDOMAIN.ini certonly"
+        ##scl enable python27 "$LETSBIN -q --agree-tos --expand --config $CONFIGSSL/$EACHDOMAIN.ini certonly"
         echo "Update SSL Certificate $EACHDOMAIN on $DATENOW" >> $LOGSSLFILE;
         /etc/init.d/httpd restart
   fi
